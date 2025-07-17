@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="../CSS/cubestilo.css">
+</head>
+<body>
+  <header><h1>
+    🎬 Películas Online</h1>
+</header>
+  <div class="container">
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+      <input type="text" id="usuario" placeholder="Usuario" required>
+      <input type="password" id="clave" placeholder="Contraseña" required>
+      <button type="submit">Ingresar</button>
+    </form>
+    <div class="link">
+      ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const user = document.getElementById('usuario').value;
+      const pass = document.getElementById('clave').value;
+
+      const userStored = localStorage.getItem('usuarioRegistrado');
+      const passStored = localStorage.getItem('claveRegistrada');
+
+      if (!userStored || !passStored) {
+        alert('Primero debes registrarte.');
+        window.location.href = 'registro.html';
+      } else if (user === userStored && pass === passStored) {
+        window.location.href = 'inicio.html';
+      } else {
+        alert('Usuario o contraseña incorrectos.');
+      }
+    });
+  </script>
+</body>
+</html>

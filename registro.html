@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro</title>
+  <link rel="stylesheet" href="../CSS/cubestilo.css">
+</head>
+<body>
+  <header>
+    <h1>🎬 Películas Online</h1>
+  </header>
+  <div class="container">
+    <h2>Crear Cuenta</h2>
+    <form id="registroForm">
+      <input type="text" id="usuario" placeholder="Usuario" required>
+      <input type="password" id="clave" placeholder="Contraseña" required>
+      <button type="submit">Registrarse</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('registroForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const user = document.getElementById('usuario').value;
+      const pass = document.getElementById('clave').value;
+      localStorage.setItem('usuarioRegistrado', user);
+      localStorage.setItem('claveRegistrada', pass);
+      alert('¡Registro exitoso! Ahora inicia sesión.');
+      window.location.href = 'iniciarsesion.html';
+    });
+  </script>
+</body>
+</html>

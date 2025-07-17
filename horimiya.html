@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ver Serie</title>
+  <link rel="stylesheet" href="../CSS/seriesstilo.css">
+</head>
+<body>
+  <header>
+    <a href="inicio.html" class="volver">⟵ Menú</a>
+    <h1>Horimiya</h1>
+  </header>
+
+  <main>
+    <div class="serie-info">
+      <img src="../img/horimiya.jpg" alt="Portada serie">
+      <div class="descripcion">
+        <p><strong>Descripción:</strong> Horimiya es una serie de anime y manga de romance y comedia que sigue
+             la vida de dos estudiantes de preparatoria: Kyoko Hori, una chica popular y responsable, y Izumi 
+             Miyamura, un chico callado y con un estilo oscuro fuera de la escuela. Aunque parecen muy distintos, 
+             ambos esconden 
+            una parte de sí mismos que no muestran a los demás. Al conocerse mejor, comienzan una relación que
+             evoluciona desde la amistad hasta el amor, mientras descubren que no todo es lo que parece en la vida 
+             de los demás.</p>
+        <p><strong>Género:</strong>Romance, Comedia,Recuentos de la vida (slice of life),Escolar</p>
+        <p><strong>Año:</strong>  2021</p>
+      </div>
+    </div>
+
+    <!-- Temporadas -->
+    <section class="temporada">
+      <h2 onclick="toggleTemporada('t1')">Temporada 1 ⌄</h2>
+      <div id="t1" class="episodios">
+        <a href="horimiyaT1Cap1.html"><div class="episodio">Episodio 1 - Una pequeña casualidad</div></a>
+       <a href="horimiyaT1Cap2.html"> <div class="episodio">Episodio 2 - Usas más de una cara</div></a>
+        <a href="horimiyaT1Cap3.html"><div class="episodio">Episodio 3 - Por eso está bien</div></a>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <script>
+    function toggleTemporada(id) {
+      const seccion = document.getElementById(id);
+      seccion.classList.toggle('visible');
+    }
+  </script>
+</body>
+</html>

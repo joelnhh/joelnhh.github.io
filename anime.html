@@ -1,0 +1,67 @@
+DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Página de Películas</title>
+  <link rel="stylesheet" href="../CSS/cubestilo.css">
+</head>
+<body>
+
+  <header>
+     <div class="logo">
+      <img src="../img/cubotvlogo.png" alt="Logo CUBE TV" />
+     
+    </div>
+    <a href="perfil.html" class="btn-perfil">
+  <img id="fotoMenu" src="img/default-user.png" alt="Perfil">
+</a>
+
+    <h1>🎬 Películas Online</h1>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="Familiar.html">Familiar</a></li>
+        <li><a href="accion.html">Acción</a></li>
+        <li><a href="anime.html">Anime</a></li>
+      </ul>
+    </nav>
+  </header>
+
+   <div class="contenedor-peliculas">
+    <a href="Elio.html"><div class="pelicula"><img src="../img/elio.jpg" alt="Elio" /></div></a>
+    <a href="intensamente2.html"><div class="pelicula"><img src="../img/intensamente.jpg" alt="Intensamente 2" /></div></a>
+    <a href="#"><div class="pelicula"><img src="../img/Videocine_MamaReinventada_Poster_iFBX-390x560.jpg" alt="Mamá para moda" /></div></a>
+    <a href="rampage.html"><div class="pelicula"><img src="../img/proyecto-rampagne-peliculas-mas-vistas-durante-la-cuarentena.jpg" alt="Rampage" /></div></a>
+    <a href="ponte.html"><div class="pelicula"><img src="../img/ponte.jpeg" alt="Ponte en mi lugar" /></div></a>
+    <a href="SquidGame.html"><div class="pelicula"><img src="../img/el-juego-del-caalmar.jpg" alt="SquidGame" /></div></a>
+   <a href="horimiya.html"> <div class="pelicula"><img src="../img/horimiyal67.jpg" alt="Anime" /></div></a>
+    <a href=""><div class="pelicula"><img src="../img/rapidos-y-furiososw.jpg" alt="Aventura" /></div></a>
+    <a href="#"><div class="pelicula"><img src="../img/lb.jpg" alt="Miraculous" /></div></a>
+    <a href="#"><div class="pelicula"><img src="../img/quiero-comerme-tu-pancreas.jpg" alt="Pancreas" /></div></a>
+    <a href="lateoriadeltodo.html"><div class="pelicula"><img src="../img/la-teoria-del-todo.jpg" alt="StephenHawking" /></div></a>
+       <a href="#"><div class="pelicula"><img src="../img/cars.jpg" alt="Cars" /></div></a>
+    <a href="rampage.html"><div class="pelicula"><img src="../img/Juego-de-gemelas.jpg" alt="juegogemelas" /></div></a>
+    <a href="ponte.html"><div class="pelicula"><img src="../img/Toy_Story.jpg" alt="ToyStory" /></div></a>
+       <a href="buscandoaNemo.html"><div class="pelicula"><img src="../img/nemito.jpg" alt="buscandoaNemo" /></div></a>
+       <a href="buscandoaNemo.html"><div class="pelicula"><img src="../img/coco" alt="buscandoaNemo" /></div></a>
+  </div>
+
+  <footer>
+    
+  <p>© 2025 Películas Online - CubeTv</p>
+  <p>Hecho Cube Studios</p>
+</footer>
+
+  <script src="script.js"></script>
+
+</body>
+<script>
+  window.onload = function () {
+    const foto = localStorage.getItem('fotoPerfil');
+    if (foto) {
+      document.getElementById('fotoMenu').src = foto;
+    }
+  };
+</script>
+
+</html>

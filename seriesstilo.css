@@ -1,0 +1,84 @@
+body {
+  background-color: #fff;
+  color: black;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #ffe100;
+  color: black;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .volver {
+  position: absolute;
+  left: 20px;
+  top: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+main {
+  padding: 2rem;
+}
+
+.serie-info {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.serie-info img {
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+.descripcion {
+  max-width: 600px;
+}
+
+.temporada {
+  margin-bottom: 1.5rem;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+}
+
+.temporada h2 {
+  cursor: pointer;
+  color: #ffe100;
+  transition: 0.2s;
+}
+
+.temporada h2:hover {
+  text-decoration: underline;
+}
+
+.episodios {
+  display: none;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.episodios.visible {
+  display: block;
+}
+
+.episodio {
+  background-color: #7e7c7c;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(255,255,255,0.05);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ver Serie</title>
+  <link rel="stylesheet" href="../CSS/seriesstilo.css">
+</head>
+<body>
+  <header>
+    <a href="inicio.html" class="volver">⟵ Menú</a>
+    <h1>El Juego del Calamar</h1>
+  </header>
+
+  <main>
+    <div class="serie-info">
+      <img src="../img/el-juego-del-caalmar.jpg" alt="Portada serie">
+      <div class="descripcion">
+        <p><strong>Descripción:</strong> La historia sigue a Seong Gi-hun, un hombre con muchas
+             deudas y problemas personales, que es invitado a participar en un misterioso juego 
+             junto con otras 455 personas. Todos compiten en una serie de juegos infantiles coreanos, 
+             pero con una cruel diferencia: quien pierde, muere. El premio final es de 45.600 millones 
+             de wones (aproximadamente 38 millones de dólares).
+A medida que avanza la serie, se exploran temas como la desesperación económica, la desigualdad social, 
+la moralidad y el valor de la vida humana.</p>
+        <p><strong>Género:</strong>Suspenso,Drama,Thriller psicológico,Crítica social</p>
+        <p><strong>Año:</strong>  2021</p>
+      </div>
+    </div>
+
+    <!-- Temporadas -->
+    <section class="temporada">
+      <h2 onclick="toggleTemporada('t1')">Temporada 1 ⌄</h2>
+      <div id="t1" class="episodios">
+        <a href="SquidT1Cap1.html"><div class="episodio">Episodio 1 - Luz Roja,Luz Verde</div></a>
+        <a href="SquidT1Cap2.html"><div class="episodio">Episodio 2 - Infierno</div></a>
+       <a href="SquidT1Cap3.html"><div class="episodio">Episodio 3 - El Hombre del Paraguas</div></a> 
+       <a href="SquidT1Cap4.html"> <div class="episodio">Episodio 4 - No abandones el Equipo</div></a>
+        <a href="SquidT1Cap5.html"><div class="episodio">Episodio 5 - Un mundo Justo</div></a>
+        <a href="SquidT1Cap6.html"><div class="episodio">Episodio 6 - Gganbu</div></a>
+        <a href="SquidT1Cap7.html"><div class="episodio">Episodio 7 - Los VIP</div></a>
+        <a href="SquidT1Cap8.html"><div class="episodio">Episodio 8 - El Líder</div></a>
+        <a href="SquidT1Cap9.html"><div class="episodio">Episodio 9 - Un día de Suerte</div></a>
+      </div>
+    </section>
+
+    <section class="temporada">
+      <h2 onclick="toggleTemporada('t2')">Temporada 2 ⌄</h2>
+      <div id="t2" class="episodios">
+        <div class="episodio">Episodio 1 - Nuevos Enemigos</div>
+        <div class="episodio">Episodio 2 - El Sacrificio</div>
+        <div class="episodio">Episodio 3 - El Final</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleTemporada(id) {
+      const seccion = document.getElementById(id);
+      seccion.classList.toggle('visible');
+    }
+  </script>
+</body>
+</html>

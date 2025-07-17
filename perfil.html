@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil de Usuario</title>
+  <link rel="stylesheet" href="../CSS/perfilstilo.css">
+</head>
+<body>
+  <div class="container">
+    <div class="profile-box">
+      <h2>Mi Perfil</h2>
+
+      <div class="foto-perfil">
+        <img id="preview" src="img/default-user.png" alt="Foto de perfil">
+        <input type="file" id="cambiarFoto" accept="image/*">
+      </div>
+
+      <div class="campo">
+        <label>Nombre de usuario</label>
+        <input type="text" id="nombreUsuario" value="">
+      </div>
+
+      <div class="botones">
+        <button onclick="guardarCambios()">Guardar Cambios</button>
+        <button onclick="cambiarContrasena()">Cambiar Contraseña</button>
+        <button onclick="volverMenu()">Volver al Menú</button>
+        <button onclick="cerrarSesion()">Cerrar Sesión</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Cargar datos si existen
+    window.onload = function () {
+      const nombre = localStorage.getItem('usuarioRegistrado');
+      if (nombre) document.getElementById('nombreUsuario').value = nombre;
+
+      const fotoGuardada = localStorage.getItem('fotoPerfil');
+      if (fotoGuardada) document.getElementById('preview').src = fotoGuardada;
+    };
+
+    // Cambiar imagen
+    document.getElementById('cambiarFoto').addEventListener('change', function () {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        document.getElementById('preview').src = e.target.result;
+        localStorage.setItem('fotoPerfil', e.target.result);
+      };
+      reader.readAsDataURL(this.files[0]);
+    });
+
+    function guardarCambios() {
+      const nuevoNombre = document.getElementById('nombreUsuario').value;
+      localStorage.setItem('usuarioRegistrado', nuevoNombre);
+      alert('¡Cambios guardados!');
+    }
+
+    function cerrarSesion() {
+      alert('Sesión cerrada');
+      window.location.href = 'CubeTvPrincipal.html';
+    }
+
+    function volverMenu() {
+      window.location.href = 'inicio.html';
+    }
+
+    function cambiarContrasena() {
+      alert('Funcionalidad no implementada aún.');
+    }
+  </script>
+</body>
+</html>
